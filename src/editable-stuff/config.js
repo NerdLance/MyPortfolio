@@ -26,11 +26,11 @@ const mainBody = {
     {
       image: "fa-linkedin",
       url: "https://www.linkedin.com/in/lanceismarketing/",
-    },
+    },/*
     {
       image: "fa-twitter",
       url: "https://www.twitter.com/nerdlance/",
-    },
+    },*/
   ],
 };
 
@@ -55,7 +55,7 @@ const about = {
   imageSize: 375,
   message:
     "My name is Lance Madden. I'm a passionate web developer with a game development hobby. I've been programming since I was in 5th grade, and it's one of the only things I can imagine loving to do every day. When I'm not programming, I'm spending time with family, or driving something German with a manual transmission.",
-  resume: require("../editable-stuff/Lance-Madden-2022.pdf"),
+  resume: "https://drive.google.com/file/d/13Zsdk5DcuZGV5BTHI4_9AKVabkUX4rTh/view?usp=sharing",
 };
 
 // PROJECTS SECTION
