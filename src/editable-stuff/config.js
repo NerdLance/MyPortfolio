@@ -68,7 +68,7 @@ const repos = {
   heading: "Recent Projects",
   gitHubUsername: "NerdLance", //i.e."johnDoe12Gh"
   reposLength: 0,
-  specificRepos: ['ReactEcom', 'ReactPokedex'],
+  specificRepos: ['ReactEcom', 'ReactPokedex', 'DevGigs', 'NextCodeProject'],
 };
 
 // Leadership SECTION
