@@ -131,18 +131,23 @@ const getInTouch = {
 };
 
 const experiences = {
-  show: false,
+  show: true,
   heading: "Experiences",
   data: [
     {
-      role: 'Software Engineer',// Here Add Company Name
-      companylogo: require('../assets/img/dell.png'),
-      date: 'June 2018 – Present',
+      role: 'Freelance Web Developer',// Here Add Company Name
+      companylogo: require('../assets/img/Freelance-Web-Developer-Logo.png'),
+      date: 'Aug 2011 – Present',
     },
     {
-      role: 'Front-End Developer',
-      companylogo: require('../assets/img/boeing.png'),
-      date: 'May 2017 – May 2018',
+      role: 'Full-Stack Developer',// Here Add Company Name
+      companylogo: require('../assets/img/Gloucester-Mass-Marketing-Logo.png'),
+      date: 'Feb 2017 – Jan 2022',
+    },
+    {
+      role: 'Head of Variable Data Development',
+      companylogo: require('../assets/img/Shawmut-Logo.png'),
+      date: 'Oct 2015 – Feb 2018',
     },
   ]
 }
