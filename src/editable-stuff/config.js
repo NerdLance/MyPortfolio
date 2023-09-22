@@ -80,12 +80,14 @@ const liveProjects = {
       description: 'A Web App for Documenting, Planning, & Sharing Your Adventures',
       image_url: '',
       live_url: 'https://tripfern.com',
+      softwares: 'Node.js, React.js, MongoDB, ExpressJS, Stripe API, AWS Lambda, AWS S3, AWS SES, TailwindCSS'
     },
     {
       name: 'Go Yard Saling',
       description: 'A Web App for Listing, Promoting, & Finding Local Yard Sales',
       image_url: '',
       live_url: 'https://goyardsaling.com',
+      softwares: 'Node.js, React.js, MongoDB, ExpressJS, Google Location API, AWS S3, AWS SES, TailwindCSS, Stripe API'
     }
   ]
 };

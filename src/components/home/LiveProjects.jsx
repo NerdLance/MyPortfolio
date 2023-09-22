@@ -8,7 +8,7 @@ const LiveProjects = ({heading, liveProjects}) => {
         <Jumbotron fluid id="projects" className="bg-light m-0">
             <Container className="">
                 <h2 className="display-4 pb-5 text-center">{heading}</h2>
-                <Row>
+                
                     {liveProjects.length > 0 && liveProjects.map((project, index) => (
                         <LiveProjectCard
                             key={`project-card-${index}`}
@@ -16,7 +16,7 @@ const LiveProjects = ({heading, liveProjects}) => {
                             project={project}
                         />
                     ))}
-                </Row>
+                
             </Container>
         </Jumbotron>
     )
