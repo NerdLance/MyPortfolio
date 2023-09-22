@@ -65,10 +65,29 @@ const about = {
 //      i.e ["repository-1", "repo-2"]
 const repos = {
   show: true,
-  heading: "Recent Projects",
+  heading: "Other Projects",
   gitHubUsername: "NerdLance", //i.e."johnDoe12Gh"
   reposLength: 0,
   specificRepos: ['ReactEcom', 'ReactPokedex', 'DevGigs', 'NextCodeProject'],
+};
+
+const liveProjects = {
+  show: true,
+  heading: 'Live Projects',
+  liveProjects: [
+    {
+      name: 'Trip Fern',
+      description: 'A Web App for Documenting, Planning, & Sharing Your Adventures',
+      image_url: '',
+      live_url: 'https://tripfern.com',
+    },
+    {
+      name: 'Go Yard Saling',
+      description: 'A Web App for Listing, Promoting, & Finding Local Yard Sales',
+      image_url: '',
+      live_url: 'https://goyardsaling.com',
+    }
+  ]
 };
 
 // Leadership SECTION
@@ -135,6 +154,11 @@ const experiences = {
   heading: "Experiences",
   data: [
     {
+      role: 'Junior Web Developer',
+      companylogo: require('../assets/img/Cross-Catholic-Logo.png'),
+      date: 'Oct 2022 – Present'
+    },
+    {
       role: 'Freelance Web Developer',// Here Add Company Name
       companylogo: require('../assets/img/Freelance-Web-Developer-Logo.png'),
       date: 'Aug 2011 – Present',
@@ -157,4 +181,4 @@ const experiences = {
 //   show: false,
 // };
 
-export { navBar, mainBody, about, repos, skills, leadership, getInTouch, experiences };
+export { navBar, mainBody, about, repos, liveProjects, skills, leadership, getInTouch, experiences };

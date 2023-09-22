@@ -5,6 +5,7 @@ import {
   mainBody,
   about,
   repos,
+  liveProjects,
   leadership,
   skills,
   getInTouch,
@@ -22,6 +23,7 @@ import GetInTouch from "./components/home/GetInTouch.jsx";
 import Leadership from "./components/home/Leadership.jsx";
 
 import Experience from "./components/home/Experience";
+import LiveProjects from "./components/home/LiveProjects.jsx";
 
 const Home = React.forwardRef((props, ref) => {
   return (
@@ -47,14 +49,11 @@ const Home = React.forwardRef((props, ref) => {
           <Experience experiences={experiences}/>
         )
       }
-      {repos.show && (
-        <Project
-        heading={repos.heading}
-        username={repos.gitHubUsername}
-        length={repos.reposLength}
-        specfic={repos.specificRepos}
-        />
-      )}
+      {
+        liveProjects.show && (
+          <LiveProjects liveProjects={liveProjects.liveProjects} heading={liveProjects.heading} />
+        )
+      }
       {leadership.show && (
         <Leadership
           heading={leadership.heading}
@@ -68,6 +67,14 @@ const Home = React.forwardRef((props, ref) => {
           heading={skills.heading}
           hardSkills={skills.hardSkills}
           softSkills={skills.softSkills}
+        />
+      )}
+      {repos.show && (
+        <Project
+        heading={repos.heading}
+        username={repos.gitHubUsername}
+        length={repos.reposLength}
+        specfic={repos.specificRepos}
         />
       )}
       
