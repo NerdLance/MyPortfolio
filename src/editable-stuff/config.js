@@ -55,7 +55,7 @@ const about = {
   imageSize: 375,
   message:
     "My name is Lance Madden. I'm a passionate web developer with a game development hobby. I've been programming since I was in 5th grade, and it's one of the only things I can imagine loving to do every day. When I'm not programming, I'm spending time with family, or driving something German with a manual transmission.",
-  resume: "https://drive.google.com/file/d/13Zsdk5DcuZGV5BTHI4_9AKVabkUX4rTh/view?usp=sharing",
+  resume: "https://drive.google.com/file/d/171xF5YxC7i1xOBOgeNtaMdHr6ilLSfwE/view?usp=sharing",
 };
 
 // PROJECTS SECTION
@@ -76,19 +76,19 @@ const liveProjects = {
   heading: 'Live Projects',
   liveProjects: [
     {
+      name: 'Step Worker',
+      description: 'A Web App for Documenting and Progressing through a Twelve Step Program.',
+      image_url: '',
+      live_url: 'https://stepworker.com',
+      softwares: 'Laravel, Livewire, SQL, TailwindCSS, AWS S3, AWS SES'
+    },
+    {
       name: 'Trip Fern',
       description: 'A Web App for Documenting, Planning, & Sharing Your Adventures',
       image_url: '',
       live_url: 'https://tripfern.com',
       softwares: 'Node.js, React.js, MongoDB, ExpressJS, Stripe API, AWS Lambda, AWS S3, AWS SES, TailwindCSS'
     },
-    {
-      name: 'Go Yard Saling',
-      description: 'A Web App for Listing, Promoting, & Finding Local Yard Sales',
-      image_url: '',
-      live_url: 'https://goyardsaling.com',
-      softwares: 'Node.js, React.js, MongoDB, ExpressJS, Google Location API, AWS S3, AWS SES, TailwindCSS, Stripe API'
-    }
   ]
 };
 
@@ -122,9 +122,9 @@ const skills = {
   heading: "Skills",
   hardSkills: [
     { name: "PHP", value: 90 },
-    { name: "SQL", value: 75 },
+    { name: "SQL", value: 80 },
     { name: "Data Structures", value: 85 },
-    { name: "Laravel", value: 65 },
+    { name: "Laravel", value: 95 },
     { name: "JavaScript", value: 90 },
     { name: "React", value: 65 },
     { name: "HTML/CSS", value: 55 },
@@ -156,7 +156,7 @@ const experiences = {
   heading: "Experiences",
   data: [
     {
-      role: 'Junior Web Developer',
+      role: 'Web Developer',
       companylogo: require('../assets/img/Cross-Catholic-Logo.png'),
       date: 'Oct 2022 – Present'
     },
