@@ -6,6 +6,7 @@ import {
   about,
   repos,
   liveProjects,
+  unpublishedProjects,
   leadership,
   skills,
   getInTouch,
@@ -24,6 +25,7 @@ import Leadership from "./components/home/Leadership.jsx";
 
 import Experience from "./components/home/Experience";
 import LiveProjects from "./components/home/LiveProjects.jsx";
+import UnpublishedProjects from "./components/home/UnpublishedProjects.jsx";
 
 const Home = React.forwardRef((props, ref) => {
   return (
@@ -52,6 +54,15 @@ const Home = React.forwardRef((props, ref) => {
       {
         liveProjects.show && (
           <LiveProjects liveProjects={liveProjects.liveProjects} heading={liveProjects.heading} />
+        )
+      }
+      {
+        unpublishedProjects.show && (
+          <UnpublishedProjects 
+            unpublishedProjects={unpublishedProjects.unpublishedProjects} 
+            heading={unpublishedProjects.heading} 
+            subheading={unpublishedProjects.subheading}
+          />
         )
       }
       {leadership.show && (

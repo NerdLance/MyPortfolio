@@ -64,7 +64,7 @@ const about = {
 // If you want to display specfic projects, add the repository names,
 //      i.e ["repository-1", "repo-2"]
 const repos = {
-  show: true,
+  show: false,
   heading: "Other Projects",
   gitHubUsername: "NerdLance", //i.e."johnDoe12Gh"
   reposLength: 0,
@@ -76,20 +76,62 @@ const liveProjects = {
   heading: 'Live Projects',
   liveProjects: [
     {
+      name: 'My Rent (In Progress)',
+      description: 'Rental Management & Rent Payment Software for Tenants and Landlords.',
+      image_url: '',
+      live_url: 'https://myrnt.com',
+      softwares: 'Laravel, Stripe API, Livewire, MySQL, TailwindCSS, AWS S3, AWS SES, DocuSign'
+    },
+    {
+      name: 'Sassy Nails',
+      description: 'Salon CRM, Lead Generation, & Appointment Management software for a local Nail Salon.',
+      image_url: '',
+      live_url: 'https://sassynailsgloucester.com',
+      softwares: 'Laravel, Stripe API, HubSpot CRM API, Twilio, Livewire, MySQL, TailwindCSS, AWS S3, AWS SES'
+    },
+    {
       name: 'Step Worker',
       description: 'A Web App for Documenting and Progressing through a Twelve Step Program.',
       image_url: '',
       live_url: 'https://stepworker.com',
-      softwares: 'Laravel, Livewire, SQL, TailwindCSS, AWS S3, AWS SES'
+      softwares: 'Laravel, Livewire, MySQL, TailwindCSS, AWS S3, AWS SES'
     },
     {
       name: 'Trip Fern',
-      description: 'A Web App for Documenting, Planning, & Sharing Your Adventures',
+      description: 'A Web App for Documenting, Planning, & Sharing Your Travel Adventures.',
       image_url: '',
       live_url: 'https://tripfern.com',
-      softwares: 'Node.js, React.js, MongoDB, ExpressJS, Stripe API, AWS Lambda, AWS S3, AWS SES, TailwindCSS'
+      softwares: 'Node.js, React.js, MongoDB, Express.js, Stripe API, AWS Lambda, AWS S3, AWS SES, TailwindCSS'
     },
   ]
+};
+
+const unpublishedProjects = {
+  show: true,
+  heading: 'Unpublished Projects',
+  subheading: 'Private repositories available upon request',
+  unpublishedProjects: [
+    {
+      name: 'AI Website Generator',
+      description: 'A ChatGPT-powered website generation tool. Create modern responsive websites based on a simple prompt.',
+      softwares: 'OpenAI API, React.js, Node.js'
+    },
+    {
+      name: 'Spreadsheet Comparison Tool',
+      description: 'A simple spreadsheet tool for a client designed to parse large datasets, compare selectable columns, and find similar data.',
+      softwares: 'Sheets.js, React.js'
+    },
+    {
+      name: 'Mark My Books',
+      description: 'A way to track reading progress, keep notes/quotes, save bookmarks, and more.',
+      softwares: 'Laravel, React.js, AWS S3'
+    },
+    {
+      name: 'Go Yard Saling',
+      description: 'As someone who grew up yardsaling, this tool is designed for fellow yardsalers to create, find, & advertise local yardsales.',
+      softwares: 'Laravel, React.js, Google API'
+    },
+  ],
 };
 
 // Leadership SECTION
@@ -121,23 +163,23 @@ const skills = {
   show: true,
   heading: "Skills",
   hardSkills: [
-    { name: "PHP", value: 90 },
+    { name: "PHP", value: 100 },
     { name: "SQL", value: 80 },
-    { name: "Data Structures", value: 85 },
     { name: "Laravel", value: 95 },
     { name: "JavaScript", value: 90 },
-    { name: "React", value: 65 },
-    { name: "HTML/CSS", value: 55 },
+    { name: "React", value: 80 },
+    { name: "HTML/CSS", value: 85 },
     { name: "C#", value: 60 },
+    { name: "Data Structures", value: 85 },
   ],
   softSkills: [
-    { name: "Goal-Oriented", value: 80 },
-    { name: "Collaboration", value: 90 },
-    { name: "Positivity", value: 75 },
+    { name: "Self-Education", value: 100 },
+    { name: "Entrepreneurialism", value: 100 },
+    { name: "Positivity", value: 95 },
     { name: "Adaptability", value: 85 },
-    { name: "Problem Solving", value: 75 },
+    { name: "Leadership", value: 80 },
     { name: "Empathy", value: 90 },
-    { name: "Organization", value: 70 },
+    { name: "Collaboration", value: 80 },
     { name: "Creativity", value: 90 },
   ],
 };
@@ -183,4 +225,4 @@ const experiences = {
 //   show: false,
 // };
 
-export { navBar, mainBody, about, repos, liveProjects, skills, leadership, getInTouch, experiences };
+export { navBar, mainBody, about, repos, liveProjects, unpublishedProjects, skills, leadership, getInTouch, experiences };
