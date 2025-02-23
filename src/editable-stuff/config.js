@@ -189,7 +189,7 @@ const getInTouch = {
   show: true,
   heading: "Get In Touch",
   message:
-    "Always interested in unique opportunities. If you know of any, or have a fun project idea and are looking for a developer, please send an email.",
+    "Always interested in unique opportunities. If you know of any, or have a fun project idea and are looking for a developer, please send an email",
   email: "lance@gloucestermassmarketing.com",
 };
 
