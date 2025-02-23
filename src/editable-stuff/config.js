@@ -46,7 +46,7 @@ const mainBody = {
 //      i.e: profilePictureLink: "",
 // For Resume either provide link to your resume or import from "editable-stuff" directory
 //     i.e resume: require("../editable-stuff/resume.pdf"),
-//         resume: "https://docs.google.com/document/d/13_PWdhThMr6roxb-UFiJj4YAFOj8e_bv3Vx9UHQdyBQ/edit?usp=sharing",
+//         resume: "xyz",
 
 const about = {
   show: true,
@@ -55,7 +55,7 @@ const about = {
   imageSize: 375,
   message:
     "My name is Lance Madden. I'm a passionate web developer with a game development hobby. I've been programming since I was in 5th grade, and it's one of the only things I can imagine loving to do every day. When I'm not programming, I'm spending time with family, or driving something German with a manual transmission.",
-  resume: "https://drive.google.com/file/d/1J0rooRWnXXm-DRxRc1QBVUo4PNazXN_f/view?usp=sharing",
+  resume: "https://drive.google.com/file/d/1WQ9GGfP7aI57ViPHoE44trxikN6S4R45/view?usp=sharing",
 };
 
 // PROJECTS SECTION
@@ -189,7 +189,7 @@ const getInTouch = {
   show: true,
   heading: "Get In Touch",
   message:
-    "I'm currently looking for full-time Web Development opportunities! If you know of any positions available, if you have any questions, or if you just want to say hi, please feel free to email me at",
+    "Always interested in unique opportunities. If you know of any, or have a fun project idea and are looking for a developer, please send an email.",
   email: "lance@gloucestermassmarketing.com",
 };
 
