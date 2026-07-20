@@ -3,11 +3,16 @@ import { useScrollPosition } from "../hooks/useScrollPosition";
 import useResizeObserver from "../hooks/useResizeObserver";
 import Navbar from "react-bootstrap/Navbar";
 import Nav from "react-bootstrap/Nav";
-import { mainBody, experiences, liveProjects, about, skills } from "../editable-stuff/config.js";
+import * as productionConfig from "../editable-stuff/config.js";
 import { NavLink } from "./home/migration";
 
 const Navigation = React.forwardRef((props, ref) => {
-  // const { showBlog, FirstName } = config;
+  const {
+    pageConfig = productionConfig,
+    routePath = "",
+  } = props;
+  const { mainBody, experiences, liveProjects, about, skills } = pageConfig;
+  const routeUrl = `${process.env.PUBLIC_URL}/${routePath}`;
   const [isTop, setIsTop] = useState(true);
   const [scrollPosition, setScrollPosition] = useState(0);
   const navbarMenuRef = React.useRef();
@@ -38,7 +43,7 @@ const Navigation = React.forwardRef((props, ref) => {
         }`}
       expand="lg"
     >
-      <Navbar.Brand className="navbar-brand" href={process.env.PUBLIC_URL + "/#home"}>
+      <Navbar.Brand className="navbar-brand" href={`${routeUrl}#home`}>
         {`<${mainBody.firstName} />`}
       </Navbar.Brand>
       <Navbar.Toggle aria-controls="basic-navbar-nav" className="toggler" />
@@ -60,21 +65,21 @@ const Navigation = React.forwardRef((props, ref) => {
           {about.show && (
             <NavLink
               className="nav-item lead"
-              href={process.env.PUBLIC_URL + "/#aboutme"}
+              href={`${routeUrl}#aboutme`}
             >
               About
             </NavLink>
           )}
           {experiences.show && (
             <NavLink
-              href={process.env.PUBLIC_URL + "/#experiences"}
+              href={`${routeUrl}#experiences`}
             >
               Work
             </NavLink>
           )}
           {liveProjects.show && (
             <NavLink
-              href={process.env.PUBLIC_URL + "/#projects"}
+              href={`${routeUrl}#projects`}
             >
               Projects
             </NavLink>
@@ -82,7 +87,7 @@ const Navigation = React.forwardRef((props, ref) => {
           {skills.show && (
             <NavLink
               className="nav-item lead"
-              href={process.env.PUBLIC_URL + "/#skills"}
+              href={`${routeUrl}#skills`}
             >
               Skills
             </NavLink>
