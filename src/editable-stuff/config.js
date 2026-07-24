@@ -44,9 +44,8 @@ const mainBody = {
 //      i.e: profilePictureLink: require("../editable-stuff/hashirshoaeb.png"),
 //d) If you do not want any picture to be displayed, just leave it empty :)
 //      i.e: profilePictureLink: "",
-// For Resume either provide link to your resume or import from "editable-stuff" directory
-//     i.e resume: require("../editable-stuff/resume.pdf"),
-//         resume: "xyz",
+// Use the public, root-relative resume path so it works across every route.
+//     i.e. resume: "/resume/Lance-Madden-Resume.pdf",
 
 const about = {
   show: true,
@@ -55,7 +54,7 @@ const about = {
   imageSize: 375,
   message:
     "My name is Lance Madden. I'm a passionate web developer with a game development hobby. I've been programming since I was in 5th grade, and it's one of the only things I can imagine loving to do every day. When I'm not programming, I'm spending time with family, or driving something German with a manual transmission.",
-  resume: "https://drive.google.com/file/d/1WQ9GGfP7aI57ViPHoE44trxikN6S4R45/view?usp=sharing",
+  resume: "/resume/Lance-Madden-Resume.pdf",
 };
 
 // PROJECTS SECTION

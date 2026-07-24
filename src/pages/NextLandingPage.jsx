@@ -433,8 +433,7 @@ const NextLandingPage = () => {
             <a
               className="next-button next-button-secondary"
               href={contactLinks.resume}
-              target="_blank"
-              rel="noopener noreferrer"
+              download="Lance-Madden-Resume.pdf"
               onClick={() =>
                 trackHomepageEvent("homepage_resume_download", {
                   placement: "footer",

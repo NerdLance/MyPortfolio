@@ -89,7 +89,8 @@ You should have [Node.js](https://nodejs.org/en/) and [Git](https://git-scm.com/
 
 3. Open in editor and edit [src/editable-stuff/config.js](./src/editable-stuff/config.js) file.
 
-4. Add your resume as <resume.pdf> in place of [src/editable-stuff/resume.pdf](./src/editable-stuff/)
+4. Add the production resume at
+   `public/resume/Lance-Madden-Resume.pdf`.
 
 5. Edit [title](./public/index.html#L34) and meta [description](./public/index.html#L13) in [public/index.html](./public/index.html).
 

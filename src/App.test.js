@@ -86,6 +86,27 @@ test("renders the production landing page at the root route", () => {
     screen.queryByRole("link", { name: "(978) 704-5900" })
   ).not.toBeInTheDocument();
   expect(screen.getAllByText(/built my first video game/i)).toHaveLength(1);
+
+  const viewResumeLink = screen.getByRole("link", { name: "View Resume" });
+  expect(viewResumeLink).toHaveAttribute(
+    "href",
+    "/resume/Lance-Madden-Resume.pdf"
+  );
+  expect(viewResumeLink).toHaveAttribute("target", "_blank");
+  expect(viewResumeLink).not.toHaveAttribute("download");
+
+  const downloadResumeLink = screen.getByRole("link", {
+    name: "Download Resume",
+  });
+  expect(downloadResumeLink).toHaveAttribute(
+    "href",
+    "/resume/Lance-Madden-Resume.pdf"
+  );
+  expect(downloadResumeLink).toHaveAttribute(
+    "download",
+    "Lance-Madden-Resume.pdf"
+  );
+  expect(downloadResumeLink).not.toHaveAttribute("target");
 });
 
 test("redirects the retired preview route to the homepage and preserves its query", async () => {
@@ -115,6 +136,16 @@ test("reports the stable homepage page-view event", () => {
   expect(window.gtag).toHaveBeenCalledWith("event", "homepage_page_view", {
     route: "/",
   });
+
+  fireEvent.click(screen.getByRole("link", { name: "View Resume" }));
+  expect(window.gtag).toHaveBeenCalledWith(
+    "event",
+    "homepage_resume_download",
+    {
+      route: "/",
+      placement: "hero",
+    }
+  );
 });
 
 test("returns focus to the mobile menu button when Escape closes navigation", () => {
@@ -164,6 +195,27 @@ test("renders the Laracon landing page with projects and contact actions", () =>
     "content",
     "Lance Madden at Laracon | Software Engineer & Product Builder"
   );
+
+  const viewResumeLink = screen.getByRole("link", { name: "View resume" });
+  expect(viewResumeLink).toHaveAttribute(
+    "href",
+    "/resume/Lance-Madden-Resume.pdf"
+  );
+  expect(viewResumeLink).toHaveAttribute("target", "_blank");
+  expect(viewResumeLink).not.toHaveAttribute("download");
+
+  const downloadResumeLink = screen.getByRole("link", {
+    name: "Download resume",
+  });
+  expect(downloadResumeLink).toHaveAttribute(
+    "href",
+    "/resume/Lance-Madden-Resume.pdf"
+  );
+  expect(downloadResumeLink).toHaveAttribute(
+    "download",
+    "Lance-Madden-Resume.pdf"
+  );
+  expect(downloadResumeLink).not.toHaveAttribute("target");
 });
 
 test("renders a graceful project placeholder when media is unavailable", () => {

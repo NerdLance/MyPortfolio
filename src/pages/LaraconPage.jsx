@@ -73,6 +73,14 @@ const LaraconPage = () => {
             </a>
             <a
               className="laracon-button laracon-button-secondary"
+              href={contactLinks.resume}
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              View resume
+            </a>
+            <a
+              className="laracon-button laracon-button-secondary"
               href={contactLinks.linkedin}
               target="_blank"
               rel="noopener noreferrer"
@@ -223,7 +231,10 @@ const LaraconPage = () => {
               GitHub
             </a>
             <a href={contactLinks.email}>Email</a>
-            <a href={contactLinks.resume} target="_blank" rel="noopener noreferrer">
+            <a
+              href={contactLinks.resume}
+              download="Lance-Madden-Resume.pdf"
+            >
               Download resume
             </a>
             <a href={contactLinks.portfolio}>Main portfolio</a>

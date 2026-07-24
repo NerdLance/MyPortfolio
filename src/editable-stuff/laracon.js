@@ -7,8 +7,7 @@ export const contactLinks = {
   email: "mailto:Lance@LanceMadden.com",
   github: "https://github.com/NerdLance",
   linkedin: "https://www.linkedin.com/in/NerdLance",
-  resume:
-    "https://drive.google.com/file/d/1WQ9GGfP7aI57ViPHoE44trxikN6S4R45/view?usp=sharing",
+  resume: "/resume/Lance-Madden-Resume.pdf",
   portfolio: "/",
 };
 
