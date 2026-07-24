@@ -116,6 +116,45 @@ You should have [Node.js](https://nodejs.org/en/) and [Git](https://git-scm.com/
 
 Facing issues? Feel free to contact at hashirshoaeb@gmail.com.
 
+## Homepage promotion and rollback
+
+The approved `NextLandingPage` is the production root page. The previous
+`HomePage` and its dependencies are intentionally retained for a short-term
+rollback.
+
+### Required AWS Amplify rule
+
+The repository does not contain an Amplify redirect configuration file, so add
+this rule in **Amplify Hosting → Rewrites and redirects** before deploying:
+
+| Order | Source | Target | Type |
+| --- | --- | --- | --- |
+| 1 | `/next` | `/` | `301 (Permanent redirect)` |
+| 2 | `/<*>` | `/index.html` | `404 (Rewrite)` |
+| 3 | `</^[^.]+$|\.(?!(css|gif|ico|jpg|js|png|txt|svg|woff|ttf|map|json)$)([^.]+$)/>` | `/index.html` | `200 (Rewrite)` |
+
+The `/next` redirect must precede both SPA rewrites so Amplify returns a real
+301 instead of serving `index.html` with a 200 or 404 status. Leave the
+redirect's query fields empty so Amplify forwards incoming query strings. Also
+verify that Amplify custom headers do not apply `X-Robots-Tag: noindex` to `/`;
+no such header is configured in this repository.
+
+### Rollback
+
+Prefer rolling back to the previous Amplify deployment or reverting the focused
+promotion commit. To restore the behavior manually:
+
+1. In `src/App.js`, import `HomePage`, render it at `/`, and restore
+   `NextLandingPage` at `/next`.
+2. In `src/editable-stuff/nextConfig.js`, restore the `/next` canonical URL and
+   `noindex,follow`.
+3. Restore the pre-promotion metadata in `public/index.html`.
+4. Rename `homepage_*` analytics events back to `next_*` only if the preview
+   dashboard also needs to be restored.
+5. Remove `public/sitemap.xml` and the sitemap line in `public/robots.txt`
+   (there was no previous sitemap).
+6. Remove the Amplify `/next` 301 rule, then rebuild and redeploy.
+
 ## Showcase 🚀
 
 Have you changed something in the code to create your own version? Feel free to share with me, I will list them in this space.
